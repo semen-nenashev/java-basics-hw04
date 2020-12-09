@@ -1,27 +1,31 @@
-public class SalariedEmployee {
-  // TODO fix class declaration and declare variables here
+public class SalariedEmployee extends Employee {
+    static String socialSecurityNumber;
+    static double fixedMonthlyPayment;
 
-  public SalariedEmployee(String employeeId, String name, String socialSecurityNumber) {
-    // TODO fill in code here
-  }
+    public SalariedEmployee(String employeeId, String name, String socialSecurityNumber) {
+        super(employeeId, name);
+        this.socialSecurityNumber = socialSecurityNumber;
+    }
 
-  public String getSocialSecurityNumber() {
-    // TODO fill in code here and replace the return statement
-    return "";
-  }
 
-  public void setSocialSecurityNumber(String socialSecurityNumber) {
-    // TODO fill in code here
-  }
+    public void calculatePay() {
+        monthSalary = this.fixedMonthlyPayment;
+    }
 
-  public double getFixedMonthlyPayment() {
-    // TODO fill in code here and replace the return statement
-    return 0;
-  }
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
+    }
 
-  public void setFixedMonthlyPayment(double fixedMonthlyPayment) {
-    // TODO fill in code here
-  }
+    public void setSocialSecurityNumber(String socialSecurityNumber) {
+        this.socialSecurityNumber = socialSecurityNumber;
+    }
 
-  // TODO fill in code here
+    public double getFixedMonthlyPayment() {
+        return fixedMonthlyPayment;
+    }
+
+    public void setFixedMonthlyPayment(double fixedMonthlyPayment) {
+        this.fixedMonthlyPayment = fixedMonthlyPayment;
+    }
+
 }
